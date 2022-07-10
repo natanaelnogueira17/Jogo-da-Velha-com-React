@@ -1,8 +1,8 @@
-function Icon ({iconName, size, link}){
+function Icon ({iconName, size, link, children}){
   return(
 <a href={link} target= "blank">
  <img src={`/icons/${iconName}.svg`} width={size}/>
- <p>Github</p>  
+  {children}
 </a>
     
   )

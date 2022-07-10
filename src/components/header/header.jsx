@@ -10,7 +10,9 @@ return(
     <Title>Jogo da Velha </Title>
     <Subtitle>Criado por Natanael Nogueira</Subtitle>
     <div className={styles.iconsContent}>
-    <Icon iconName="github" link="https://github.com/natanaelnogueira17"></Icon>
+    <Icon iconName="github" link="https://github.com/natanaelnogueira17">
+    <br/>Github 
+    </Icon>
     </div>
   </div>
 )

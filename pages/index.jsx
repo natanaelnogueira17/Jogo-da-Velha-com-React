@@ -1,10 +1,10 @@
-import GamePage from "../src/components/gamepage/Gamepage"
-import Title from "../src/components/title/Title"
+import GamePage from "./src/components/gamepage/GamePage"
 
 function HomePage () {
   
   return (
     <GamePage/>
+    
   )
 }
 

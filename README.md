@@ -1,7 +1,7 @@
 # Jogo-da-Velha-com-React
 
 Nesse projeto estou desenvolvendo habilidades com o React e colocando em pratica um pouco mais 
-de logica e estrturacao/estilização com HTM5 e CSS3 dentro do react/NextJS.
+de logica e estrutura/estilização com HTML5 e CSS3 dentro do react/NextJS.
 
 Vale a pena conferir.
 

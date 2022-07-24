@@ -1,6 +1,7 @@
 import style from './Header.module.css'
 import Title from "../title/Title"
 import Subtitle from "../subtitle/Subtitle"
+import Icon from "../icon/Icon"
 
 function Header(){
   return(
@@ -8,6 +9,10 @@ function Header(){
 
       <Title>Jogo da velha</Title>      
       <Subtitle>Criado por  Natanael Nogueira</Subtitle>
+      <div className={style.iconcontent}>
+        <Icon  iconName="github" link="https://github.com/natanaelnogueira17"/>
+      </div>
+      
   
 
     </div>

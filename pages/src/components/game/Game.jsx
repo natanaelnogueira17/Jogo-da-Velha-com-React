@@ -15,7 +15,7 @@ function Game (){
           gameState.map((value, pos)=><GameOptions 
           key ={`game-option-pos-${pos}`} 
           status={value}
-          onClick={()=>{console.log("CLICK")}}
+          onClick={()=>{console.log("você CLICOU")}}
           />)
       }
 

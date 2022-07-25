@@ -1,3 +1,4 @@
+import React from 'react'
 import style from './Header.module.css'
 import Title from "../title/Title"
 import Subtitle from "../subtitle/Subtitle"

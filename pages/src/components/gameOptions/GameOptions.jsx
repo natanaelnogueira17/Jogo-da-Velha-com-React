@@ -8,11 +8,11 @@ function GameOptions({status, onClick}){
     <div className={style.gameOptions} onClick={onClick}>
         
        {
-        status === 1 && <Icon iconName="circle" />
+        status === 1 && <GameIcon iconName="circle" />
        }
 
 {
-        status === -1 && <Icon iconName="x" />
+        status === -1 && <GameIcon iconName="x" />
        }
     </div>
   )

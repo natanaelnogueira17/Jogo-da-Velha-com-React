@@ -1,8 +1,8 @@
 .gameoption{
 border: 2px solid white;
 border-radius: 5px;
-height: 60px;
-width: 60px;
+height: 40px;
+width: 40px;
 display: flex;
 justify-content: center;
 align-items: center;

@@ -8,7 +8,7 @@ function Icon({iconName, size, link}){
 }
 
 Icon.defaultprops = {
-  size: '50px'
+  size: '15px'
 }
 
 export default Icon

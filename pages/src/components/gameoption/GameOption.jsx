@@ -2,11 +2,11 @@ import style from './GameOption.module.css'
 import Icon from '../icon/Icon'
 
 //opcional por conta do tamanho que repete
-const GameIcon = ({iconName})=> <Icon iconName={iconName} size="25px"/> 
+const GameIcon = ({iconName})=> <Icon iconName={iconName} size="15px"/> 
 
-function GameOption({status}){
+function GameOption({status, onClick}){
   return(
-    <div className={style.gameoption}>
+    <div className={style.gameoption} onClick={onClick}>
       {
           status === 1 &&  <GameIcon iconName="circle" />       
       }

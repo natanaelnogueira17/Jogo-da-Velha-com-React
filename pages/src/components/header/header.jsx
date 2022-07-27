@@ -11,7 +11,7 @@ function Header(){
       <Title>Jogo da velha</Title>      
       <Subtitle>Criado por  Natanael Nogueira</Subtitle>
       <div className={style.iconcontent}>
-        <Icon  iconName="github" link="https://github.com/natanaelnogueira17"/>
+        <Icon  iconName="github" link="https://github.com/natanaelnogueira17" size="30px"/>
       </div>
       
   

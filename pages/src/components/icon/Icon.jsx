@@ -3,14 +3,12 @@ function Icon({iconName, size, link}){
     <a href={link} target="blanck">
      <img src={`../icons/${iconName}.svg`} width={size}/>
      </a>
-     
-    
-   
+
   )
 }
 
 Icon.defaultprops = {
-  size: '30px'
+  size: '50px'
 }
 
 export default Icon

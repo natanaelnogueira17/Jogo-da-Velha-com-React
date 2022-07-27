@@ -1,27 +1,22 @@
-import { useState } from "react"
+import { useState } from 'react'
+
+import style from './Game.module.css'
+import GameOption from '../gameOption/GameOption'
 
 
-import GameOptions from "../gameOptions/GameOptions"
-import style from "./Game.module.css"
-
-
-
-function Game (){
-  const [gameState, setGameState] = useState(Array(9).fill(0))
-
-  return(
-    <div className={style.grid}>
-      {
-          gameState.map((value, pos)=><GameOptions 
-          key ={`game-option-pos-${pos}`} 
-          status={value}
-          onClick={()=>{console.log("você CLICOU")}}
-          />)
-      }
-
-
+function Game () {
+const [gameState, setGameState] = useState(Array(9).fill(0))
+  return (
+    <div className={style.game}>
+          {
+            gameState.map((value, pos)=>
+            <GameOption 
+            key={`game-option-pos-${pos}`}
+            status={value} 
+            />)
+          }
+    
     </div>
   )
 }
-
 export default Game

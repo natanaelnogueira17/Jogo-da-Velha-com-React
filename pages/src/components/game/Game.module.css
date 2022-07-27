@@ -1,7 +1,5 @@
-.grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  
-
+.game{
+display: grid;
+grid-template-columns: repeat(3,3fr);
+gap: 15px;
 }

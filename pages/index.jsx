@@ -1,5 +1,5 @@
 import GamePage from "./src/components/gamepage/GamePage"
-import Game from "./src/components/game/Game"
+//import Game from "./src/components/game/Game"
 
 function HomePage () {
   

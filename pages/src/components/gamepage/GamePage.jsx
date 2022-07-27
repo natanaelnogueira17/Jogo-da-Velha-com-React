@@ -6,6 +6,7 @@ function GamePage(){
   <div className="container">
     <Header></Header>
     <Game/>
+    
   </div>  
      
   

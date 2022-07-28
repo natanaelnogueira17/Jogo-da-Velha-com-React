@@ -10,3 +10,8 @@
 .button:hover{
   background: rgb(8, 157, 194);
 }
+
+.button:disabled{
+cursor: default;
+background-color: rgb(103, 180, 200);
+}

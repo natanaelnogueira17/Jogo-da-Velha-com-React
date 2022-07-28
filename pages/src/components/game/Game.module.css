@@ -4,5 +4,9 @@ grid-template-columns: repeat(3,3fr);
 gap: 15px;
 }
 
-
-
+@media screen and (max-width:400px){
+  
+.gameContent{
+  flex-direction: column;
+}
+}

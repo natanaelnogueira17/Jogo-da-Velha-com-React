@@ -35,15 +35,15 @@ const values = line.map((pos)=> gameState[pos])
 const sum = values.reduce((sum, value)=> sum + value)
 if(sum === 3 || sum === -3) 
 setWinner(sum/3)
-setWinnerLine(line)
+
 })
 }
  
 
 
-const handleReset = ()=>{
+const handleReset = () => {
   setGameState (Array(9).fill(0))
-  setWinner( 0)
+  setWinner(0)
   setWinnerLine([])
 }
 
@@ -65,7 +65,7 @@ winnerLine.find((value)=> value === pos ) !== undefined
             key={`game-option-pos-${pos}`}
             status={value} 
             onClick={()=> handleClick(pos)}
-            isWinner={verifyWinnerLine(pos) }  
+            isWinner ={verifyWinnerLine(pos)}
             />
             )
           }

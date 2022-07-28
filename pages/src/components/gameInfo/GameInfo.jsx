@@ -21,13 +21,16 @@ winner === 0 &&
     {
       winner !== 0 &&
         <>
-          <h4>Fim de jogo! Campeão: </h4>
+          <h4>Fim de jogo!</h4>
+          <p> Campeão:</p>
+            
               {
               winner === 1 && <Icon iconName="circle" />
               }
               {
               winner === -1 && <Icon iconName="x"  />
               }
+                
         </>
     }
             <Button 

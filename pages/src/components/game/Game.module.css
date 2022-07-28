@@ -4,6 +4,11 @@ grid-template-columns: repeat(3,3fr);
 gap: 15px;
 }
 
+.gameContent{
+  display: flex;
+  gap: 20px;
+}
+
 @media screen and (max-width:400px){
   
 .gameContent{

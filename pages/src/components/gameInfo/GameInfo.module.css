@@ -1,7 +1,8 @@
 .gameInfo{
-  margin-top: 30px;
+  margin: 10px 0 0px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   }
+

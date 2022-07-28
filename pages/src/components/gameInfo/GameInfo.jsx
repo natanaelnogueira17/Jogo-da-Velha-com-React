@@ -1,7 +1,8 @@
 import style from './GameInfo.module.css'
 import Icon from "../icon/Icon"
+import Button from '../button/Button'
 
-function GameInfo({currentPlayer, winner}){
+function GameInfo({currentPlayer, winner, onReset}){
   return(
     <div className={style.gameInfo}>
     {
@@ -29,6 +30,11 @@ winner === 0 &&
               }
         </>
     }
+            <Button 
+            onClick={onReset}
+            >
+              Reiniciar Jogo
+            </Button>
   </div>
 
   )

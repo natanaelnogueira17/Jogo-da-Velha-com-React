@@ -37,6 +37,12 @@ if(sum === 3 || sum === -3) setWinner(sum/3)
 }
  
 
+
+const handleReset = ()=>{
+  setGameState (Array(9).fill(0))
+  setWinner( 0)
+}
+
    useEffect(()=>{ 
     setCurrentPlayer(currentPlayer * -1)
     verifyGame()
@@ -59,7 +65,9 @@ if(sum === 3 || sum === -3) setWinner(sum/3)
 
         <GameInfo
         currentPlayer= {currentPlayer}
-        winner = {winner}/>  
+        winner = {winner}
+        onReset = {handleReset}
+        />  
     </div>
     
   )

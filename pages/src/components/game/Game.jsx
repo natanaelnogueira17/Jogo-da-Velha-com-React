@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-
 import style from './Game.module.css'
-import Icon from '../icon/Icon'
 import GameOption from '../gameOption/GameOption'
+import GameInfo from '../gameInfo/gameInfo'
 
 const winnerTable = [
 [0,1,2],
@@ -56,18 +55,11 @@ if(sum === 3 || sum === -3) setWinner(sum/3)
             )
           }
     
-    </div>
+        </div>  
 
-    <div className={style.gameInfo}>
-      <h4>Próximo a jogar: </h4>
-      {
-        currentPlayer === -1 && <Icon iconName="x"  size="20px"/>
-      }
-
-    {
-        currentPlayer === 1 && <Icon iconName="circle" size = "20px"/>
-      }
-    </div>
+        <GameInfo
+        currentPlayer= {currentPlayer}
+        winner = {winner}/>  
     </div>
     
   )

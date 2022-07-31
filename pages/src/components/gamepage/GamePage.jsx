@@ -4,7 +4,7 @@ import Game from "../game/Game"
 function GamePage(){
   return(
   <div className="container">
-    <Header></Header>
+    <Header/>
     <Game/>
     
   </div>  

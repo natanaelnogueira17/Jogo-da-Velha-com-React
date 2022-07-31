@@ -6,12 +6,13 @@ import Icon from '../icon/Icon'
 //opcional por conta do tamanho que repete
 const GameIcon = ({iconName})=> <Icon iconName={iconName} size="15px"/> 
 
-function GameOption({status,onClick, isWinner}){
+function GameOption({status,onClick, isWinner, isDraw}){
   return(
     <div 
       className={
       classNames(style.gameoption,
-      {[style.winner]: isWinner
+      {[style.winner]: isWinner, 
+        [style.draw]: isDraw
       })
     } 
     onClick={onClick}

@@ -13,3 +13,7 @@ cursor: pointer;
 .winner{
   border: 2px solid rgb(8, 191, 237); 
 }
+
+.draw{
+  border: 2px solid yellow;
+}

@@ -1,0 +1,22 @@
+.game{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gameContent{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 15px;
+ 
+}
+
+.gameInfo{
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+
+}

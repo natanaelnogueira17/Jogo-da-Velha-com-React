@@ -1,11 +1,12 @@
-import GamePage from "./src/components/gamepage/GamePage"
-//import Game from "./src/components/game/Game"
+import GamePage from '../src/components/gamepage/GamePage'
 
 function HomePage () {
   
   return (
     
-    <GamePage/> 
+   <div>
+    <GamePage/>
+   </div>
     
     
     

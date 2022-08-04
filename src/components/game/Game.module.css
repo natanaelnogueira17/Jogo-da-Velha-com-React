@@ -12,11 +12,3 @@
  
 }
 
-.gameInfo{
-  font-size: 14px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  text-align: center;
-
-}

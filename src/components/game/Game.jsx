@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-
+import GameInfo from "../gameInfo/GameInfo";
 import GameOption from "../gameOption/GameOption";
 import styles from './Game.module.css'
-import Icon from '../icon/Icon'
+
 
 const winnerTable = [
   [0,1,2],
@@ -17,35 +17,41 @@ const winnerTable = [
 ]
 
 function Game (){
-  const [gameState, setGameState]=useState(Array(9).fill(0))
-  const [currentPlayer, setCurrentPlayer] = useState(1)
-  const [winner, setWinner] = useState()
+  const [gameState, setGameState] = useState(Array(9).fill(0))
+  const [currentPlayer, setCurrentPlayer] = useState(-1) // inicio do jogo com o 1
+  const [winner, setWinner] = useState(0) //verificar vencedor - iniciar com 0
   
 
 
-  const handleClick = (pos) =>{
+  const handleClick = (pos) =>{ // quando usuario clicar
     
-    if(gameState[pos] === 0 || winner === 0 )   
+    if(gameState[pos] === 0 && winner === 0)    //condicao
     {
       let newGameState = [...gameState]
-        newGameState[pos] = currentPlayer
+        newGameState[pos] = currentPlayer  // criar um jogador atual 
        setGameState(newGameState)     
-    }
-    
-    
-  }
-  const verifyGame = ()=>{
-    winnerTable.forEach((line)=>{
-      const values = line.map((pos)=> gameState[pos])
-        const sum = values.reduce((sum, value)=>sum + value)
-        if(sum === 3  || sum === -3) 
-        setWinner (sum /3)
-        
-})
+    }    
   }
 
+  const verifyGame = () => {  //verifica o jogo, quam ganhou!
+    winnerTable.forEach((line) => {
+      const values = line.map((pos) => gameState[pos])
+        const sum = values.reduce((sum, value) => sum + value)
+        if(sum === 3  || sum === -3) {
+          setWinner (sum /3) 
+        }        
+      })
+    }
+
+    const handleReset = () => {
+      setGameState(Array(9).fill(0))
+      setWinner(0)
+    }
+
+   
+
   useEffect(()=>{ 
-    setCurrentPlayer(currentPlayer * -1)
+    setCurrentPlayer(currentPlayer * -1) // ao refresh iniciar com jogador multiplicado por -1(se 1 vira -1 e vice versa)
     verifyGame()
    },[gameState])
 
@@ -54,8 +60,8 @@ function Game (){
           <div className={styles.game}>
 
               {
-                gameState.map((value, pos)=>
-                <GameOption
+                gameState.map((value, pos)=> //passa pelo gamestate que é o array e pega o valor e posicao do click
+                <GameOption //1ou -1
                 key={`game-option-pos-${pos}`}
                 status={value}
                 onClick={() => handleClick(pos)}
@@ -64,21 +70,15 @@ function Game (){
               }   
             
             </div>
-
-              <div className={styles.gameInfo}>
-                if(winner === 0){
-                  <h4>Próximo a jogar: </h4>
-                 
-                    {  
-                      currentPlayer === 1 && <Icon iconName="circle" size="20px"/>
-                    }
-                    {
-                      currentPlayer === -1 && <Icon iconName="x" size="20px" />
-                    }
-                  }
-              </div>
+            
+            <GameInfo 
+            currentPlayer ={currentPlayer} // mostrando prox jogador
+            winner={winner}  // mostrando vencedor
+            clickReset = {handleReset}
+            
+            />           
         
-  </div> 
+      </div> 
 
   )
 }

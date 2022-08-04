@@ -2,7 +2,7 @@ import styles from '../subtitle/Subtitle.module.css'
 
 function Subtitle ({children}){
   return(
-    <h6 classname={styles.subtitle}>
+    <h6 className={styles.subtitle}>
       {children}
     </h6>
   )

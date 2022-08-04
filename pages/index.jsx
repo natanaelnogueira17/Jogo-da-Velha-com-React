@@ -1,15 +1,16 @@
 import GamePage from '../src/components/gamepage/GamePage'
 
+
+
 function HomePage () {
   
   return (
     
-   <div>
-    <GamePage/>
-   </div>
+    <div>
     
-    
-    
+    <GamePage></GamePage>
+    </div>
+
   )
 }
 

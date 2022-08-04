@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+
 class NewDocument extends Document {
   render() {
     return (
@@ -10,6 +11,7 @@ class NewDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
         </Head>
         <body>
+          
           <Main />
           <NextScript />
         </body>

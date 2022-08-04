@@ -1,7 +1,7 @@
 import Subtitle from '../subtitle/Subtitle'
 import Title from '../Title/Title'
 import styles from '../header/Header.module.css'
-import Icon from '../icon/Icon'
+
 
 function Header (){
   return(
@@ -12,10 +12,9 @@ function Header (){
     <Subtitle>
       Criado por Natanael Nogueira
     </Subtitle> 
-    <div className={styles.iconContent}>
-      <Icon iconName="github" size="25px" link="https://github.com/natanaelnogueira17"/>
-    </div>
+        
 </div> 
+
 
 
   )

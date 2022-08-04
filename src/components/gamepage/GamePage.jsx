@@ -1,12 +1,20 @@
 import Header from '../header/Header'
 import Game from '../game/Game'
+import Navigation from '../Nav/Navigation'
+
 
 function GamePage(){
   return(
-  <div className="container">
-  <Header></Header>
-  <Game></Game>
+
+<>
+  <div>
+    <Navigation></Navigation>
   </div>  
+  <div className="container">
+      <Header></Header>
+      <Game></Game>
+  </div>
+</>  
      
   
 

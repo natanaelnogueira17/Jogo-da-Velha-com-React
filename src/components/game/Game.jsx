@@ -66,6 +66,7 @@ function Game (){
             </div>
 
               <div className={styles.gameInfo}>
+                if(winner === 0){
                   <h4>Próximo a jogar: </h4>
                  
                     {  
@@ -74,7 +75,7 @@ function Game (){
                     {
                       currentPlayer === -1 && <Icon iconName="x" size="20px" />
                     }
-                  
+                  }
               </div>
         
   </div> 

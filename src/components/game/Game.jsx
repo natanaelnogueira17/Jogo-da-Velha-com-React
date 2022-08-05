@@ -21,6 +21,7 @@ function Game (){
   const [currentPlayer, setCurrentPlayer] = useState(-1) // inicio do jogo com o 1
   const [winner, setWinner] = useState(0) //verificar vencedor - iniciar com 0
   const [winnerLine, setWinnerLine] = useState([])
+  const [draw, setDraw] = useState(false)
   
 
 
@@ -49,16 +50,27 @@ function Game (){
       setGameState(Array(9).fill(0))
       setWinner(0)
       setWinnerLine([])
+      setDraw(false)
 
     }
-
+    const verifyDraw=()=>{
+        if(gameState.find((value)=> value === 0) === undefined && winner ===0){
+          setDraw(true)
+        }
+      }
+    
    const verifyWinnerLine = (pos) =>
     winnerLine.find((value)=> value === pos) !== undefined
 
   useEffect(()=>{ 
     setCurrentPlayer(currentPlayer * -1) // ao refresh iniciar com jogador multiplicado por -1(se 1 vira -1 e vice versa)
     verifyGame()
+    verifyDraw()
    },[gameState])
+
+   useEffect(()=>{ 
+        if(winner !== 0)setDraw(false)
+   },[winner])
 
   return(
     <div className={styles.gameContent}>
@@ -71,6 +83,7 @@ function Game (){
                 status={value}
                 onClick={() => handleClick(pos)}
                 isWinner = { verifyWinnerLine(pos)}
+                isDraw = {draw}
                 />
                 )
               }   
@@ -81,6 +94,7 @@ function Game (){
             currentPlayer ={currentPlayer} // mostrando prox jogador
             winner={winner}  // mostrando vencedor
             clickReset = {handleReset}
+            isDraw = {draw}
             
             />           
         

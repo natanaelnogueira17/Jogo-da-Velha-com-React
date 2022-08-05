@@ -1,3 +1,10 @@
 .title{
-  font-size: 38px;
+  background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+  font-size: 35px;
+ 
+  
 }

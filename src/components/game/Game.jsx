@@ -23,6 +23,8 @@ function Game (){
   const [winner, setWinner] = useState(0) //verificar vencedor - iniciar com 0
   const [winnerLine, setWinnerLine] = useState([])
   const [draw, setDraw] = useState(false)
+  const [scoreX, setScoreX] = useState(0)
+  const [scoreCircle, setScoreCircle] = useState(0)
   
 
 
@@ -43,9 +45,12 @@ function Game (){
         if(sum === 3  || sum === -3) {
           setWinner (sum /3) 
           setWinnerLine(line)
+          sum > 0 ? setScoreCircle(scoreCircle +1) : setScoreX(scoreX +1)
         }        
       })
     }
+
+    
 
     const handleReset = () => {
       setGameState(Array(9).fill(0))
@@ -101,7 +106,7 @@ function Game (){
             />           
         
           </div> 
-        <Score/>
+        <Score scoreX = {scoreX} scoreCircle = {scoreCircle}/>
     </>
 
   )

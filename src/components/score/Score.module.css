@@ -1,0 +1,17 @@
+.score{
+  
+  display: flex;
+  gap:30px;
+  
+
+}
+
+.scoreContent{
+  display: flex;  
+  gap: 10px;
+}
+
+.scoreGeral{
+  display: flex;  
+  gap: 20px;
+}

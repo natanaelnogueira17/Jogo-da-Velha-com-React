@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import GameInfo from "../gameInfo/GameInfo";
 import GameOption from "../gameOption/GameOption";
 import styles from './Game.module.css'
+import Score from '../score/Score'
 
 
 const winnerTable = [
@@ -73,8 +74,9 @@ function Game (){
    },[winner])
 
   return(
-    <div className={styles.gameContent}>
-          <div className={styles.game}>
+    <>
+         <div className={styles.gameContent}>
+            <div className={styles.game}>
 
               {
                 gameState.map((value, pos)=> //passa pelo gamestate que é o array e pega o valor e posicao do click
@@ -98,7 +100,9 @@ function Game (){
             
             />           
         
-      </div> 
+          </div> 
+        <Score/>
+    </>
 
   )
 }

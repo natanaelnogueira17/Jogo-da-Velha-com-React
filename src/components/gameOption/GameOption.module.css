@@ -8,3 +8,7 @@
   justify-content: center;
   
 }
+
+.winner{
+  border: 2px rgb(9, 219, 212) solid;
+}

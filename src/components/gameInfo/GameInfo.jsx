@@ -25,7 +25,7 @@ function GameInfo({currentPlayer, winner, clickReset, disable}){
             {
               winner !== 0 &&          
                 <>
-                  <h4 className={styles.h4}> Fim de jogo!! <br/>O vencedor foi: </h4>
+                  <p className={styles.h4}> Fim de jogo!! <br/>O vencedor foi: </p>
                       {                
                       winner === -1  && <Icon iconName = "x" size="20px"/> 
                       }

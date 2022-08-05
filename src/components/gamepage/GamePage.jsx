@@ -14,8 +14,7 @@ function GamePage(){
       <Header></Header>
       <Game></Game>
   </div>
-</>  
-     
+</>    
   
 
   )

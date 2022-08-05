@@ -1,8 +1,17 @@
 .button{
    margin-top: 10px;
-   background-color: red;
+   background-color: rgb(20, 183, 17);
    color: aliceblue;
    border-radius: 5px;
    width:100px;
    height: 30px;   
+   cursor:pointer;
+}
+
+
+
+.button:disabled{
+   cursor: default;
+   background-color: red;
+
 }

@@ -20,6 +20,7 @@ function Game (){
   const [gameState, setGameState] = useState(Array(9).fill(0))
   const [currentPlayer, setCurrentPlayer] = useState(-1) // inicio do jogo com o 1
   const [winner, setWinner] = useState(0) //verificar vencedor - iniciar com 0
+  const [winnerLine, setWinnerLine] = useState([])
   
 
 
@@ -39,6 +40,7 @@ function Game (){
         const sum = values.reduce((sum, value) => sum + value)
         if(sum === 3  || sum === -3) {
           setWinner (sum /3) 
+          setWinnerLine(line)
         }        
       })
     }
@@ -46,9 +48,12 @@ function Game (){
     const handleReset = () => {
       setGameState(Array(9).fill(0))
       setWinner(0)
+      setWinnerLine([])
+
     }
 
-   
+   const verifyWinnerLine = (pos) =>
+    winnerLine.find((value)=> value === pos) !== undefined
 
   useEffect(()=>{ 
     setCurrentPlayer(currentPlayer * -1) // ao refresh iniciar com jogador multiplicado por -1(se 1 vira -1 e vice versa)
@@ -65,6 +70,7 @@ function Game (){
                 key={`game-option-pos-${pos}`}
                 status={value}
                 onClick={() => handleClick(pos)}
+                isWinner = { verifyWinnerLine(pos)}
                 />
                 )
               }   

@@ -1,6 +1,7 @@
 import Subtitle from '../subtitle/Subtitle'
 import Title from '../Title/Title'
 import styles from '../header/Header.module.css'
+import Icon from '../icon/Icon'
 
 
 function Header (){
@@ -12,6 +13,8 @@ function Header (){
     <Subtitle>
       Criado por Natanael Nogueira
     </Subtitle> 
+    
+            
         
 </div> 
 
